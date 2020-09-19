@@ -1,0 +1,9 @@
+{% extends "base_template.html" %}
+
+{% block content %}
+    <body>
+    {% for res in resume %}
+        <div>{{ res.author.username }}: {{ res.description }}</div>
+    {% endfor %}
+    </body>
+{% endblock %}

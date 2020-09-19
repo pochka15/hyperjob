@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base_template</title>
+    {% block head_block %} {% endblock %}
+    <style>
+        #homeButton {
+            font-family: "Lora", serif;
+            font-style: italic;
+            font-size: 60px;
+            width: fit-content;
+        }
+
+        * {
+            font-family: "Arial", sans-serif;
+        }
+
+        .centered {
+            margin: auto;
+            width: 50%;
+            font-size: large;
+        }
+
+    </style>
+</head>
+<body>
+<a id="homeButton" href="/">Home</a>
+<div class="centered">
+    {% block content %} {% endblock %}
+</div>
+</body>
+</html>

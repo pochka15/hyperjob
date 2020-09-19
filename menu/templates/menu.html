@@ -1,0 +1,18 @@
+{% extends "base_template.html" %}
+
+{% block  head_block %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "menu/menu.css" %}">
+{% endblock %}
+
+{% block content %}
+    <h2>Welcome to HyperJob!</h2>
+    <div class="menu_items">
+        {% for tup in url_tuples %}
+            <p>
+                <a href={{ tup.0 }}>{{ tup.1 }}</a>
+            </p>
+        {% endfor %}
+    </div>
+{% endblock %}
+

@@ -1,0 +1,14 @@
+{% extends "base_template.html" %}
+
+{% block content %}
+    <form method="post" action="/vacancy/new">{% csrf_token %}
+        <h2>Add vacancy</h2>
+        {{ vacancy_form.as_p }}
+        <input type="submit" value="Save">
+    </form>
+    <form method="post" action="/resume/new">{% csrf_token %}
+        <h2>Add resume</h2>
+        {{ resume_form.as_p }}
+        <input type="submit" value="Save">
+    </form>
+{% endblock %}
